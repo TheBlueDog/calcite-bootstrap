@@ -1,0 +1,142 @@
+// ┌───────┐
+// │ Cards │
+// └───────┘
+
+.cal-card {
+  background-color: $Calcite_Gray_050;
+  border: 1px solid $Calcite_Gray_350;
+  text-align: center;
+  //height: $card-height;
+  //width: $card-width;
+  padding: 20px;
+  box-shadow:(0 0 10px 1px rgba(0, 0, 0, 0));
+
+  img {
+    width: 100%;
+  }
+  hr {
+    color: $Calcite_Gray_250;
+  }
+  .cal-card-head {
+    font-weight: 400;
+    color: $Calcite_Gray_650;
+    line-height: $line-height-base;
+    padding-bottom: 10px;
+    display: block;
+    display: -webkit-box;
+    max-height: 52px;
+    -webkit-line-clamp: $title-lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .cal-card-info {
+    color: $Calcite_Gray_550;
+    font-size: $font-size-small;
+    line-height: $line-height-base;
+
+    li {
+      &:first-of-type:after {
+        content: " • ";
+        padding-left: 10px;
+      }
+    }
+  }
+
+  .cal-card-options {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: white;
+    opacity: 0;
+    background: rgba(black, 0.6);
+    transition:(opacity ease-in-out 400ms);
+
+    .glyphicon {
+      visibility: hidden;
+      right: -30px;
+      margin-left: 10px;
+      transition:(600ms);
+
+      &:nth-child(2) {
+        transition:(900ms);
+      }
+      &:nth-child(3) {
+        transition:(1200ms);
+      }
+      &:nth-child(4) {
+        transition:(1500ms);
+      }
+    }
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+      box-shadow:(0 0 10px 1px rgba(0, 0, 0, 0.2));
+
+      & > button {
+        transform: translateY(30px);
+        visibility: visible;
+      }
+
+      & .glyphicon {
+        transform: translateX(-30px);
+        visibility: visible;
+      }
+
+      & li {
+        visibility: visible;
+      }
+    }
+
+    ul {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      color: white;
+      font-size: rem(17px);
+
+      li {
+        visibility: hidden;
+        width: 1.7rem;
+        float: right;
+        margin-right: -.12rem;
+        cursor: pointer;
+        visibility: hidden;
+
+      }
+    }
+
+    button {
+      background: rgba(255,255,255,.1);
+      display: inline-block;
+      padding: 10px;
+      margin-top: 2.4rem;
+      text-decoration: none;
+      border: 1px solid white;
+      color: white;
+      cursor: pointer;
+      transition:(300ms);
+      visibility: hidden;
+      font-size: 1.5rem;
+      line-height: 1.6rem;
+
+      &:hover {
+        text-decoration: none;
+        border: 1px solid white;
+        color: white;
+        background: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+
+
+}
+
+
+
+
+
+

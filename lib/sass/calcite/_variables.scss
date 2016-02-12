@@ -886,9 +886,12 @@ $hr-border:                   $gray-lighter !default;
 //== Cards
 //
 //##
-$card-width: 255px;
+$card-width: 100%;
+$card-height: 300px;
 $card-thumb-max-height: 133px;
 $card-thumb-max-width: 200px;
+$title-line-height: 1.55;
+$title-lines-to-show: 2;
 
 //== Footer
 //
